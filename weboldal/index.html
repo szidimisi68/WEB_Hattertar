@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Átváltás</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="cim">Átváltás</div>
+        <div>
+        <label>Kapacitás:</label>
+        <input type="text" id="kapacitas" value="1">
+        <select id="kapacitasMertek">
+            <option value="1">KB</option>
+            <option value="1000">MB</option>
+            <option value="1000000">GB</option>
+            <option value="1000000000">TB</option>
+        </select>
+    </div>
+    <hr>
+    <div>
+        <label>Átviteli sebesség: </label> <label id="ertek">2500</label>
+        <select id="atviteliSebesseg">
+            <option value="1">KBps</option>
+            <option value="1000">MBps</option>
+            <option value="1000000">GBps</option>
+            <option value="1000000000">TBps</option>
+        </select>
+        <br>
+        <label for="sebesseg">10</label>
+        <input type="range" min="10" max="5000" value="2500" id="sebesseg" step="10" onchange="Valtoztat(sebesseg)">
+        <label for="sebesseg">5000</label>
+    </div>
+    <hr>
+    <div>
+        <br>
+        <button onclick="Szamol()">Számol</button>
+        <br>
+    </div>
+    <hr>
+    <div>
+    <label>Szükséges idő: </label><br><label id="kiiras"></label>
+</div>
+    </div>
+
+</body>
+
+</html>
